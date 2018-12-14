@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+ 
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost/ddb_projekt_2</property>
+        <property name="hibernate.connection.username">lukas</property>
+        <property name="hibernate.connection.password"></property>
+ 
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+ 
+        <!-- Print executed SQL to stdout -->
+        <property name="show_sql">true</property>
+ 
+        <!-- Annotated entity classes -->
+        <mapping class="com.lukas.ddbProject2BackEnd.entities.Predmet"/>
+        <mapping class="com.lukas.ddbProject2BackEnd.entities.Vyucujuci"/>
+        <mapping class="com.lukas.ddbProject2BackEnd.entities.Technologia"/>
+        <mapping class="com.lukas.ddbProject2BackEnd.entities.TematickyOkruh"/>
+        
+    </session-factory>
+</hibernate-configuration>
