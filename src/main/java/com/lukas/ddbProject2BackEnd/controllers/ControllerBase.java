@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
+
+import com.lukas.ddbProject2BackEnd.DbUtil;
 
 public abstract class ControllerBase<T> {
 	
@@ -17,8 +18,7 @@ public abstract class ControllerBase<T> {
 
 	@SuppressWarnings("unchecked")
 	public List<T> getAll(){
-		SessionFactory sessionFactory = new Configuration().configure()
-				.buildSessionFactory();
+		SessionFactory sessionFactory = DbUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
 		
