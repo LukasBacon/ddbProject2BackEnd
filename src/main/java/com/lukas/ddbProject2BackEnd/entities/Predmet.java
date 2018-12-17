@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
@@ -41,7 +42,7 @@ public class Predmet{
 	@Column(name = "zaujimavost")
 	private Double zaujimavost;
 	
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
     @JoinTable(
         name = "vyucuje", 
         joinColumns = { @JoinColumn(name = "predmet_id") }, 
@@ -49,7 +50,7 @@ public class Predmet{
     )
 	private Set<Vyucujuci> vyucujuci = new HashSet<>();
 	
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
     @JoinTable(
         name = "ma_technologiu", 
         joinColumns = { @JoinColumn(name = "predmet_id") }, 
@@ -58,7 +59,7 @@ public class Predmet{
 	private Set<Technologia> technologie = new HashSet<>();
     
 	
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
     @JoinTable(
         name = "ma_tematicky_okruh", 
         joinColumns = { @JoinColumn(name = "predmet_id") }, 
@@ -66,7 +67,7 @@ public class Predmet{
     )
 	private Set<TematickyOkruh> tematickeOkruhy = new HashSet<>();
 		
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
     @JoinTable(
         name = "ma_podmienujuci_predmet", 
         joinColumns = { @JoinColumn(name = "predmet_id") }, 
@@ -74,7 +75,7 @@ public class Predmet{
     )
 	private Set<Predmet> podmienujucePredmety = new HashSet<>();
     
-    @ManyToMany(cascade = { CascadeType.ALL })
+    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
     @JoinTable(
         name = "ma_vylucujuci_predmet", 
         joinColumns = { @JoinColumn(name = "predmet_id") }, 

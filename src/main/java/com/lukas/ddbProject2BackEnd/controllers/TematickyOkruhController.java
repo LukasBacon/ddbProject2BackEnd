@@ -1,13 +1,11 @@
 package com.lukas.ddbProject2BackEnd.controllers;
 
-import java.util.List;
-
 import com.lukas.ddbProject2BackEnd.entities.TematickyOkruh;
 
-public class TematickyOkruhController {
-	
-	public List<TematickyOkruh> getAll(){
-		// TODO
-		return null;
+public class TematickyOkruhController extends ControllerBase<TematickyOkruh>{
+
+	public TematickyOkruhController(Class<TematickyOkruh> typeClass) {
+		super(typeClass);
 	}
+	
 }
