@@ -17,6 +17,6 @@ public class TechnologiaService {
     @Path(value = "all") 
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     public List<Technologia> all() {
-    	return new TechnologiaController(Technologia.class).getAll();
+    	return new TechnologiaController().getAll();
     }
 }

@@ -4,8 +4,8 @@ import com.lukas.ddbProject2BackEnd.entities.Vyucujuci;
 
 public class VyucujuciController extends ControllerBase<Vyucujuci>{
 
-	public VyucujuciController(Class<Vyucujuci> typeClass) {
-		super(typeClass);
+	public VyucujuciController() {
+		super(Vyucujuci.class);
 	}
 
 }

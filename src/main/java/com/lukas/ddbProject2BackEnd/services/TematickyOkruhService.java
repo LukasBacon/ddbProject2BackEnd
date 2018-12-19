@@ -17,6 +17,6 @@ public class TematickyOkruhService {
     @Path(value = "all") 
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     public List<TematickyOkruh> all() {
-    	return new TematickyOkruhController(TematickyOkruh.class).getAll();
+    	return new TematickyOkruhController().getAll();
     }
 }

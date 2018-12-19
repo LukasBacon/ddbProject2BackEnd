@@ -4,8 +4,8 @@ import com.lukas.ddbProject2BackEnd.entities.Technologia;
 
 public class TechnologiaController extends ControllerBase<Technologia>{
 
-	public TechnologiaController(Class<Technologia> typeClass) {
-		super(typeClass);
+	public TechnologiaController() {
+		super(Technologia.class);
 	}
 
 }

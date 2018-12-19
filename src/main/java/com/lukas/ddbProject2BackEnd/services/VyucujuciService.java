@@ -17,6 +17,6 @@ public class VyucujuciService {
     @Path(value = "all") 
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     public List<Vyucujuci> all() {
-    	return new VyucujuciController(Vyucujuci.class).getAll();
+    	return new VyucujuciController().getAll();
     }
 }

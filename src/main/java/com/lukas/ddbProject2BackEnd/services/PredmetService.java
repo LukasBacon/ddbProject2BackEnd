@@ -17,6 +17,6 @@ public class PredmetService {
     @Path(value = "all") 
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     public List<Predmet> all() {
-    	return new PredmetController(Predmet.class).getAll();
+    	return new PredmetController().getAll();
     }
 }
