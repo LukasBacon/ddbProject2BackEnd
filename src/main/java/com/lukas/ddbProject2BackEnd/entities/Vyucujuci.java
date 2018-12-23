@@ -22,5 +22,9 @@ public class Vyucujuci {
 
 	public String getMeno() {
 		return meno;
+	}
+
+	public String toLiteral() {
+		return "vyucujuci(" + id + ").";
 	} 
 }

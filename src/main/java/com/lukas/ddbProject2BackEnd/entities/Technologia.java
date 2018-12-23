@@ -22,5 +22,9 @@ public class Technologia {
 
 	public String getNazov() {
 		return nazov;
+	}
+
+	public String toLiteral() {
+		return "technologia(" + id + ").";
 	} 
 }

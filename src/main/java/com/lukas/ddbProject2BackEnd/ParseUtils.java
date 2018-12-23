@@ -27,5 +27,18 @@ public class ParseUtils {
 		String[] numbersArray = numbersString.split("\\s*,\\s*");
 		return Integer.parseInt(numbersArray[n]);
 	}
+
+	public static List<Integer> getListOfIntsFromString(String zvolenePredmetyIdsString) {
+		zvolenePredmetyIdsString = StringUtils.strip(zvolenePredmetyIdsString, "]");
+		zvolenePredmetyIdsString = StringUtils.strip(zvolenePredmetyIdsString, "[");
+		String[] numbersArray = zvolenePredmetyIdsString.split("\\s*,\\s*");
+		List<Integer> result = new ArrayList<>();
+		for (String string : numbersArray) {
+			if (!string.isEmpty()) {
+				result.add(Integer.parseInt(string));
+			}
+		}
+		return result;
+	}
 	
 }

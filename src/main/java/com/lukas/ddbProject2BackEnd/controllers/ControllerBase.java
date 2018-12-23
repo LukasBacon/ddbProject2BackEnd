@@ -41,7 +41,7 @@ public abstract class ControllerBase<T> {
 		String tableName = typeClass.getName();
 		List<T> result = new ArrayList<>();
 		for (Integer id : ids) {
-			String hql = "FROM " + tableName + "WHERE id = " + id ;
+			String hql = "FROM " + tableName + " WHERE id = " + id ;
 			Query<?> query = session.createQuery(hql);
 			T res = (T) query.uniqueResult();
 			result.add(res);

@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.lukas.ddbProject2BackEnd.clingo.ClingoChecker;
 import com.lukas.ddbProject2BackEnd.clingo.ClingoFilter;
 import com.lukas.ddbProject2BackEnd.entities.Predmet;
 
@@ -18,7 +19,15 @@ public class ClingoService {
     @Path(value = "filter") 
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     @Consumes(MediaType.APPLICATION_JSON + ";charset=utf-8")
-    public List<Predmet> filter(String preferences) {	
+    public List<Predmet> filter(String preferences) {
     	return new ClingoFilter().getPredmety(preferences);
+    }
+    
+    @POST
+    @Path(value = "check")
+    @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
+    @Consumes(MediaType.APPLICATION_JSON + ";charset=utf-8")
+    public boolean check(String selectedPredmetyIds) {
+    	return new ClingoChecker().getAnswer(selectedPredmetyIds);
     }
 }

@@ -22,5 +22,9 @@ public class TematickyOkruh {
 
 	public String getNazov() {
 		return nazov;
+	}
+
+	public String toLiteral() {
+		return "tematicky_okruh(" + id + ").";
 	}  
 }

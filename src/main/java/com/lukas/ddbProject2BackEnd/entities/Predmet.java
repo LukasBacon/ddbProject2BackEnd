@@ -134,5 +134,13 @@ public class Predmet{
 	public Set<Predmet> getVylucujucePredmety() {
 		return vylucujucePredmety;
 	}
+
+	public String toFilterLiteral() {
+		return "predmet(" + id + ", " + celkoveHodnotenie.intValue() + ", " + narocnost.intValue() + ", " + 
+				zaujimavost.intValue() + ").";
+	}
     
+	public String toCheckerLiteral(String nameOfLiteral) {
+		return nameOfLiteral + "(" + id + ", \"" + typ + "\", " + kredit + ").";
+	}
 }
