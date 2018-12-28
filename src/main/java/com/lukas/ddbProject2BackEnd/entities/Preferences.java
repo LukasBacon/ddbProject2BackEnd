@@ -2,6 +2,12 @@ package com.lukas.ddbProject2BackEnd.entities;
 
 import java.util.List;
 
+/**
+ * Trieda reprezentuje preferencie, ktore si uzivatel navolil pri filtrovani.
+ * 
+ * @author lukas
+ *
+ */
 public class Preferences {
 	
 	List<Vyucujuci> vyucujuci;

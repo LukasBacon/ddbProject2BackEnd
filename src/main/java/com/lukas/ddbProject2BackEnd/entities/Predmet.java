@@ -13,6 +13,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+/**
+ * Trieda reprezentuje predmet. Je namapovana na tabulku predmety v databaze.
+ * @author lukas
+ *
+ */
 @Entity
 @Table(name = "predmety")
 public class Predmet{

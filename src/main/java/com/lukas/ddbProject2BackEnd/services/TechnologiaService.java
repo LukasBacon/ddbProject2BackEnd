@@ -10,6 +10,12 @@ import javax.ws.rs.core.MediaType;
 import com.lukas.ddbProject2BackEnd.controllers.TechnologiaController;
 import com.lukas.ddbProject2BackEnd.entities.Technologia;
 
+/**
+ * Trieda obsahuje webservisy pre entitu technologia.
+ * 
+ * @author lukas
+ *
+ */
 @Path(value = "technologia")
 public class TechnologiaService {
 

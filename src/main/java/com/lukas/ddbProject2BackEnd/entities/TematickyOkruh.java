@@ -5,6 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Trieda reprezentuje tematicky okruh. Je namapovana na tabulku tematicke_okruhy v databaze.
+ * @author lukas
+ *
+ */
 @Entity
 @Table(name = "tematicke_okruhy")
 public class TematickyOkruh {

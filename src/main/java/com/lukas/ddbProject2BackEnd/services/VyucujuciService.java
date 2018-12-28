@@ -10,6 +10,12 @@ import javax.ws.rs.core.MediaType;
 import com.lukas.ddbProject2BackEnd.controllers.VyucujuciController;
 import com.lukas.ddbProject2BackEnd.entities.Vyucujuci;
 
+/**
+ * Trieda obsahuje webservisy pre entitu vyucujuci.
+ * 
+ * @author lukas
+ *
+ */
 @Path(value = "vyucujuci")
 public class VyucujuciService {
 

@@ -10,6 +10,12 @@ import javax.ws.rs.core.MediaType;
 import com.lukas.ddbProject2BackEnd.controllers.TematickyOkruhController;
 import com.lukas.ddbProject2BackEnd.entities.TematickyOkruh;
 
+/**
+ * Trieda obsahuje webservisy pre entitu tematicky okruh.
+ * 
+ * @author lukas
+ *
+ */
 @Path(value = "tematicky_okruh")
 public class TematickyOkruhService {
 

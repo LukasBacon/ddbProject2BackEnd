@@ -10,6 +10,12 @@ import javax.ws.rs.core.MediaType;
 import com.lukas.ddbProject2BackEnd.controllers.PredmetController;
 import com.lukas.ddbProject2BackEnd.entities.Predmet;
 
+/**
+ * Trieda obsahuje webservisy pre entitu predmet.
+ * 
+ * @author lukas
+ *
+ */
 @Path("predmet")
 public class PredmetService {
 

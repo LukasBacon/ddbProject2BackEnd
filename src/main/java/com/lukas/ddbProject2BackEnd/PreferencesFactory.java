@@ -10,10 +10,20 @@ import com.lukas.ddbProject2BackEnd.entities.Technologia;
 import com.lukas.ddbProject2BackEnd.entities.TematickyOkruh;
 import com.lukas.ddbProject2BackEnd.entities.Vyucujuci;
 
+/**
+ * Trieda sluzi na vytvorenie objetu triedy Preferences zo stringu pomocou hlavnej metody <b>loadPreferencesFromString</b>.
+ * 
+ * @author lukas
+ *
+ */
 public class PreferencesFactory {
 	
 	public PreferencesFactory() { }
 	
+	/** 
+	 * @param preferencesString
+	 * @return Vrati objet triedy Preferences, ktory nacita zo stringu.
+	 */
 	public Preferences loadPreferencesFromString(String preferencesString) {
 		Preferences preferences = new Preferences();
 		fillVyucujuci(preferences, preferencesString);

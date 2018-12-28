@@ -5,6 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Trieda reprezentuje technologiu. Je namapovana na tabulku technologie v databaze.
+ * @author lukas
+ *
+ */
 @Entity
 @Table(name = "technologie")
 public class Technologia {

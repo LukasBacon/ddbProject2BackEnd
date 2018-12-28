@@ -5,6 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Trieda reprezentuje vyucujuceho. Je namapovana na tabulku vyucujuci v databaze.
+ * @author lukas
+ *
+ */
 @Entity
 @Table(name = "vyucujuci")
 public class Vyucujuci {

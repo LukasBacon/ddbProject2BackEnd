@@ -9,14 +9,27 @@ import org.hibernate.query.Query;
 
 import com.lukas.ddbProject2BackEnd.DbUtil;
 
+/**
+ * Abstraktna trieda pre controllery nad entitami.
+ * 
+ * @author lukas
+ *
+ * @param <T> Typ entity.
+ */
 public abstract class ControllerBase<T> {
 	
+	/**
+	 * Typ, nad ktorym controller pracuje.
+	 */
 	final Class<T> typeClass;
 	
 	public ControllerBase(Class<T> typeClass) {
         this.typeClass = typeClass;
     }
 
+	/**
+	 * @return Z databazy vrati vsetky udaje entity T.
+	 */
 	@SuppressWarnings("unchecked")
 	public List<T> getAll(){
 		SessionFactory sessionFactory = DbUtil.getSessionFactory();
@@ -32,6 +45,10 @@ public abstract class ControllerBase<T> {
 		return result;
 	}
 	
+	/**
+	 * @param ids
+	 * @return Z databazy vrati vsetky entity, ktore maju id v zozname idciek <b>ids</b>.
+	 */
 	@SuppressWarnings("unchecked")
 	public List<T> getAllWithIds(List<Integer> ids) {
 		SessionFactory sessionFactory = DbUtil.getSessionFactory();

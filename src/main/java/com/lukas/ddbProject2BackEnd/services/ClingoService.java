@@ -12,6 +12,12 @@ import com.lukas.ddbProject2BackEnd.clingo.ClingoChecker;
 import com.lukas.ddbProject2BackEnd.clingo.ClingoFilter;
 import com.lukas.ddbProject2BackEnd.entities.Predmet;
 
+/**
+ * Trieda obsahuje webservisy pre clingo funkcie - filtrovanie predmetov podla preferencii a kontrola, ci predmety spnaju pravidla.
+ * 
+ * @author lukas
+ *
+ */
 @Path(value = "clingo")
 public class ClingoService {
 	

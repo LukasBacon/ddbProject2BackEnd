@@ -5,8 +5,19 @@ import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 
+/**
+ * Trieda obsahuje funkcie na parsovanie.
+ * 
+ * @author lukas
+ *
+ */
 public class ParseUtils {
 
+	/**
+	 * @param n
+	 * @param array
+	 * @return Vrati zoznam ktory je <b>n-ty</b> v poradi vo vstupnom poli <b>array</b>, ktore je v stringu. 
+	 */
 	public static List<Integer> getNthArrayFromStringArray(int n, String array) {
 		int indexFirst = StringUtils.ordinalIndexOf(array, "[", n+2);
 		int indexLast = StringUtils.ordinalIndexOf(array, "]", n+1);
@@ -20,6 +31,11 @@ public class ParseUtils {
 		return result;
 	}
 
+	/**
+	 * @param n
+	 * @param array
+	 * @return Vrati cislo kto je <b>n-ty</b> v poradi vo vstupnom poli <b>array</b>, ktore je v stringu. 
+	 */
 	public static Integer getNthNumberFromStringArray(int n, String array) {
 		int indexFirst = StringUtils.lastOrdinalIndexOf(array, "]", 2);
 		int indexLast = StringUtils.lastOrdinalIndexOf(array, "]", 1);
@@ -28,6 +44,10 @@ public class ParseUtils {
 		return Integer.parseInt(numbersArray[n]);
 	}
 
+	/**
+	 * @param zvolenePredmetyIdsString
+	 * @return Vrati zoznam cisel z vstupneho pole, ktore je v stringu.
+	 */
 	public static List<Integer> getListOfIntsFromString(String zvolenePredmetyIdsString) {
 		zvolenePredmetyIdsString = StringUtils.strip(zvolenePredmetyIdsString, "]");
 		zvolenePredmetyIdsString = StringUtils.strip(zvolenePredmetyIdsString, "[");
